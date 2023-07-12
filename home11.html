@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Food Ordering System - Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+  </style>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F9F9F9;
+      color: #444444;
+    }
+
+    a {
+      text-decoration: none;
+      color: #444444;
+    }
+
+    /* Header styles */
+    header {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+    }
+
+    /* .column {
+      float: left;
+      width: 50%;
+    }
+
+    /* Clear floats after the columns */
+    /* .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    } */
+
+    .row {
+      display: flex;
+    }
+
+    .column {
+      flex: 50%;
+    }
+
+    .column h2 {
+      padding-left: 3%;
+      padding-top: 25%;
+    }
+
+    .column p {
+      padding-left: 9%;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .column img {
+      padding-left: 7%;
+      height: 600px;
+      width: 600px;
+    }
+
+    .container1 {
+      max-width: max-content;
+      background-color: #45a049;
+      margin: 0 0;
+      padding: 0;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .topbar {
+      background-color: #4CAF50;
+      display: flex;
+      /* Make Flex container */
+      justify-content: center;
+      /* Center horizontally */
+    }
+
+    .topbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .topbar li {
+      display: inline-block;
+      
+    }
+
+    .topbar a {
+      padding: 15px 20px;
+      text-decoration: none;
+      display: inline-block;
+      color: white;
+    }
+
+    .topbar a:hover {
+      background-color: #45a049;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #FFFFFF;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    /* Main styles */
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 70px);
+    }
+
+    h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 24px;
+      margin-bottom: 40px;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    input[type="button"] {
+      background-color: #4CAF50;
+      color: #FFFFFF;
+      padding: 16px 32px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 5%;
+    }
+
+    input[type="button"]:hover {
+      background-color: #45a049;
+    }
+
+    .hh1 {
+      color: #45a050;
+      text-align: center;
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 15%;
+
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #444444;
+      color: #FFFFFF;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .newcss {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+
+    .menu1 {
+      text-align: center;
+    }
+
+    .new {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      line-height: 50px;
+      text-align: center;
+      width: 3%;
+    }
+
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .menu-item {
+      width: 300px;
+      margin: 20px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-item h3 {
+      margin: 10px;
+      font-size: 24px;
+    }
+
+    .menu-item p {
+      margin: 10px;
+    }
+
+    .menu-item span {
+      display: block;
+      margin: 10px;
+      font-size: 20px;
+    }
+
+    .quantity {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      margin-bottom: 40px;
+
+    }
+
+    input[type="text"] {
+      width: 100px;
+      text-align: center;
+      margin: 0 10px;
+    }
+
+    .user {
+      width: 5%;
+      text-align: center;
+      margin: 0 10px;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    .dropdown:hover .dropbtn {
+      background-color: red;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .container1 {
+      max-width: max-content;
+      background-color: #45a049;
+      margin: 0 0;
+      padding: 0;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #d4ffd4;
+      color: black;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+  <script type="text/javascript">
+    var dosai = 0;
+    var idly = 0;
+    var poori = 0;
+    var pongal = 0;
+    var biriyani = 0;
+    var rice = 0;
+    var cost = 0;
+    var total = 0;
+    function validate() {
+      //total=total+1;
+      dosai = dosai + 1;
+      //cost=cost+50;
+      //document.getElementById("total").value=total;
+      //document.getElementById("dosai").value=dosai;
+      document.getElementById("txt1").value = dosai;
+      // document.getElementById("cost").value=cost;
+    }
+    function validate1() {
+      //total=total+1;
+      idly = idly + 1;
+      //cost=cost+20;
+      //document.getElementById("total").value=total;
+      //document.getElementById("idly").value=idly;
+      document.getElementById("txt2").value = idly;
+      //document.getElementById("cost").value=cost;
+    }
+    function validate2() {
+      //total=total+1;
+      poori = poori + 1;
+      //cost=cost+30;
+      //document.getElementById("total").value=total;
+      //document.getElementById("poori").value=poori;
+      document.getElementById("txt3").value = poori;
+      //document.getElementById("cost").value=cost;
+    }
+    function validate3() {
+      pongal = pongal + 1;
+      document.getElementById("txt4").value = pongal;
+    }
+    function validate4() {
+      biriyani = biriyani + 1;
+      document.getElementById("txt5").value = biriyani;
+    }
+    function validate5() {
+      rice = rice + 1;
+      document.getElementById("txt6").value = rice;
+    }
+    function minus() {
+
+      if (dosai > 0) {
+        //total=total-1;
+        dosai = dosai - 1;
+        //cost=cost-50;
+        //document.getElementById("total").value=total;
+        //document.getElementById("dosai").value=dosai;
+        document.getElementById("txt1").value = dosai;
+        //document.getElementById("cost").value=cost;
+      }
+
+    }
+    function minus1() {
+
+      if (idly > 0) {
+        //total=total-1;
+        idly = idly - 1;
+        //cost=cost-20;
+        //document.getElementById("total").value=total;
+        //document.getElementById("idly").value=idly;
+        document.getElementById("txt2").value = idly;
+        //document.getElementById("cost").value=cost;
+      }
+    }
+    function minus2() {
+
+      if (poori > 0) {
+        //total=total-1;
+        poori = poori - 1;
+        //cost=cost-30;
+        //document.getElementById("total").value=total;
+        //document.getElementById("poori").value=poori;
+        document.getElementById("txt3").value = poori;
+        //document.getElementById("cost").value=cost;
+      }
+    }
+    function minus3() {
+      if (pongal > 0) {
+        pongal = pongal - 1;
+        document.getElementById("txt4").value = pongal;
+
+      }
+    }
+    function minus4() {
+      if (biriyani > 0) {
+        biriyani = biriyani - 1;
+        document.getElementById("txt5").value = biriyani;
+      }
+    }
+    function minus5() {
+      if (rice > 0) {
+        rice = rice - 1;
+        document.getElementById("txt6").value = rice;
+      }
+    }
+    function checkfill() {
+      var dosaic = document.my_form3.txt1.value;
+      var idlyc = document.my_form3.txt2.value;
+      var pooric = document.my_form3.txt3.value;
+      var pongalc = document.my_form3.txt4.value;
+      var biriyanic = document.my_form3.txt5.value;
+      var ricec = document.my_form3.txt6.value;
+      if (dosaic == 0 && idlyc == 0 && pooric == 0 && pongalc == 0 && biriyani == 0 && ricec == 0) {
+        alert("Atleast select one menu");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="topbar">
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="/aboutus">About Us</a></li>
+      <li><a href="/aboutus">Contact Us</a></li>
+      <div class="dropdown">
+        <li><a href="#"><i class='fas fa-user-alt'></i>
+          <%=username1%>
+        </a></li>
+        <div class="dropdown-content">
+          <a href="/profile">Edit Profile</a>
+          <a href="/orders">View Orders</a>
+          <a href="/">Logout</a>
+        </div>
+      </div>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="row">
+      <div class="column container">
+        <h2>Welcome to our Food Ordering System!</h2>
+        <p>Order your favorite food online and get it delivered to your doorstep.</p>
+      </div>
+      <div class="column"><img src="container_img.jpg"></div>
+    </div>
+  </main>
+  <section id="menu">
+    <form name="my_form3" action="/cartitems" method="post">
+      <h2 class="menu1">Menu</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <img src="food1.jpg" alt="Food Item" width="700" height="400">
+          <h3>Dosai</h3>
+          <!-- <p>A dose, also called dosai, dosey, dwashi or dosha is a thin pancake in South Indian cuisine made from a fermented batter of ground black lentils and rice.</p> -->
+          <span>Price : Rs.50</span><br><br>
+          <div class="quantity">
+            <input type="button" onclick="minus()" value="-">
+            <input type="text" class="new" id="txt1" value="0" name="dosai" readonly>
+            <input type="button" onclick="validate()" value="+">
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="food2.jpg" alt="Food Item" width="700" height="400">
+          <h3>Idly</h3>
+          <!-- <p>Idli or idly is a type of savoury rice cake, originating from South India, popular as a breakfast food in Southern India and in Sri Lanka. The cakes are made by steaming a batter consisting of fermented black lentils and rice.</p> -->
+          <span>Price : Rs.20</span><br><br>
+          <div class="quantity">
+            <input type="button" value="-" onclick="minus1()">
+            <input type="text" class="new" id="txt2" value="0" name="idly" readonly>
+            <input type="button" onclick="validate1()" value="+">
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="food3.jpg" alt="Food Item" width="700" height="400">
+          <h3>Poori</h3>
+          <!-- <p>Poori is prepared by kneading a soft but hard dough by mixing wheat flour or all purpose flour with water . It is optional to add a very small quantity of oil or ghee to make crispy and soft poori</p> -->
+          <span>Price : Rs.30</span><br><br>
+          <div class="quantity">
+            <input type="button" value="-" onclick="minus2()">
+            <input type="text" class="new" id="txt3" value="0" name="poori" readonly>
+            <input type="button" onclick="validate2()" value="+">
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="food4.jpg" alt="Food Item" width="700" height="400">
+          <h3>Pongal</h3>
+          <!-- <p>A dose, also called dosai, dosey, dwashi or dosha is a thin pancake in South Indian cuisine made from a fermented batter of ground black lentils and rice.</p> -->
+          <span>Price : Rs.40</span><br><br>
+          <div class="quantity">
+            <input type="button" onclick="minus3()" value="-">
+            <input type="text" class="new" id="txt4" value="0" name="pongal" readonly>
+            <input type="button" onclick="validate3()" value="+">
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="food5.jpg" alt="Food Item" width="700" height="400">
+          <h3>Biriyani</h3>
+          <!-- <p>A dose, also called dosai, dosey, dwashi or dosha is a thin pancake in South Indian cuisine made from a fermented batter of ground black lentils and rice.</p> -->
+          <span>Price : Rs.120</span><br><br>
+          <div class="quantity">
+            <input type="button" onclick="minus4()" value="-">
+            <input type="text" class="new" id="txt5" value="0" name="biriyani" readonly>
+            <input type="button" onclick="validate4()" value="+">
+          </div>
+        </div>
+        <div class="menu-item">
+          <img src="food6.jpeg" alt="Food Item" width="700" height="400">
+          <h3>Rice</h3>
+          <!-- <p>A dose, also called dosai, dosey, dwashi or dosha is a thin pancake in South Indian cuisine made from a fermented batter of ground black lentils and rice.</p> -->
+          <span>Price : Rs.80</span><br><br>
+          <div class="quantity">
+            <input type="button" onclick="minus5()" value="-">
+            <input type="text" class="new" id="txt6" value="0" name="rice" readonly>
+            <input type="button" onclick="validate5()" value="+">
+          </div>
+        </div>
+      </div>
+      <div class="quantity">
+        <input type="submit" value="Place Order" onmouseover="checkfill()">
+      </div>
+    </form>
+
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Food Ordering System. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

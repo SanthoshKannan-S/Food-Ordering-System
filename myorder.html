@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f7f7f7;
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Total</th>
+        <th>Dosai</th>
+        <th>Idly</th>
+        <th>Poori</th>
+        <th>Pongal</th>
+        <th>Biriyani</th>
+        <th>Rice</th>
+        <th>Cost</th>
+        <th>Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% carts.forEach((cart) => { %>
+        <tr>
+          <td><%= cart.total %></td>
+          <td><%= cart.dosai %></td>
+          <td><%= cart.idly %></td>
+          <td><%= cart.poori %></td>
+          <td><%= cart.pongal %></td>
+          <td><%= cart.biriyani %></td>
+          <td><%= cart.rice %></td>
+          <td><%= cart.cost %></td>
+          <td><%= cart.createdAt %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+    </style>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #b0de99;
+      }
+      h2 {
+        color: #333;
+        text-align: center;
+      }
+      h1 {
+        color: #45a050;
+        text-align: center;
+      }
+      form {
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+      }
+      input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+      textarea{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+    </style>
+    <script>
+        function validate(){
+            var t=document.my_form.password2.value;
+            var y=document.my_form.confirm_password1.value;
+            if(t!=y)
+            {
+              alert("Enter the same password for both fields");
+            }
+            else{
+    
+            }
+          }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Food Ordering System</h2>  
+      <h2>Profile</h1>
+      <form method="post" action="/updateprofile" name="my_form">
+        <label for="username">Username:</label>
+        <input type="text" id="username1" name="username1" readonly value=<%= username2 %>><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email1" name="email1" value=<%= email1 %>><br>
+
+        <label for="Address">Address:</label>
+        <input type="text" rows="5" id="address1" name="address1" value=<%= address1 %>><br>
+
+        <label for="phone">Mobile number:</label>
+        <input type="tel" id="phone1" name="phone1" placeholder="Ex: 9876543210" required pattern="[0-9]{10}" value=<%= phone1 %>  ><br>
+
+        <label>New Password:</label>
+        <input type="password" id="password2" name="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+
+        <label>Confirm Password:</label>
+        <input type="password" id="confirm_password1" name="confirm_password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br><br>
+
+        <input type="submit" value="Save" onmouseover="validate()" ><br>
+      </form>
+    </div>
+  </body>
+</html>

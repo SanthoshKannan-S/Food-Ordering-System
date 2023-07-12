@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+    </style>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #b0de99;
+      }
+      h2 {
+        color: #333;
+        text-align: center;
+      }
+      h1 {
+        color: #45a050;
+        text-align: center;
+      }
+      form {
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+      }
+      input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+      textarea{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+      input[type="submit"],input[type="button"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Food Ordering System</h1>  
+      <h2>My orders</h2>
+      <form method="post" action="/thankyou">
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" readonly value=<%= username1 %>><br>
+        <label for="total">Total:</label>
+        <input type="text" id="total" name="total" readonly value=<%= total3 %>><br>
+
+        <label for="dosai">Dosai:</label>
+        <input type="text" id="dosai" name="dosai" readonly value=<%= dosai3 %>><br>
+
+        <label for="idly">Idly:</label>
+        <input type="text" id="idly" name="idly" readonly value=<%= idly3 %>><br>
+
+        <label for="poori">Poori:</label>
+        <input type="text" id="poori" name="poori" readonly value=<%= poori3 %>><br>
+
+        <label for="pongal">Pongal:</label>
+        <input type="text" id="pongal" name="pongal" readonly value=<%= pongal3 %>><br>
+
+        <label for="biriyani">Biriyani:</label>
+        <input type="text" id="biriyani" name="biriyani" readonly value=<%= biriyani3 %>><br>
+
+        <label for="rice">Rice:</label>
+        <input type="text" id="rice" name="rice" readonly value=<%= rice3 %>><br>
+        
+        <label for="password">Cost:</label>
+        <input type="text" id="cost" name="cost" readonly value=<%= cost3 %>>
+      </form>
+    </div>
+  </body>
+</html>

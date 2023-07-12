@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+    </style>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #b0de99;
+          }
+          h2 {
+            color: #333;
+            text-align: center;
+          }
+          h1 {
+            color: #45a050;
+            text-align: center;
+          }
+          form {
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+    
+          }
+          label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+          }
+          input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+          }
+          input[type="submit"],input[type="button"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+          }
+          input[type="submit"]:hover {
+            background-color: #45a049;
+          }
+    </style>
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body>
+    <form method="post" action="/admin" >
+        <h1>Admin Page</h1><br>
+        <h3>Enter the details of the item present in hotel:</h3>
+        <label>Username:</label><input type="text" id="username" name="username" value=<%= username %>> <br>
+        <label>Dosai:</label><input type="text" id="dosai1" name="dosai1" value="0"><br>
+        <label>Idly:</label><input type="text" id="idly1" name="idly1" value="0"><br>
+        <label>Poori:</label><input type="text" id="poori1" name="poori1" value="0"><br>
+        <label>Pongal:</label><input type="text" id="pongal1" name="pongal1" value="0"><br>
+        <label>Biriyani:</label><input type="text" id="biriyani1" name="biriyani1" value="0"><br>
+        <label>Rice:</label><input type="text" id="rice1" name="rice1" value="0"><br>
+        <input type="submit" value="submit">
+    </form>
+    <br><br>
+    <form method="post" action="/deleteuser">
+      <h3>Delete User</h3>
+      <label>Username:</label><input type="text" id="username1" name="username1">
+      <input type="submit" value="Delete">
+    </form>
+  </body>
+</html>

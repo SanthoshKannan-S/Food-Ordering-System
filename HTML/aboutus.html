@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+  </style>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+        margin: 0;
+      }
+      
+      html {
+        box-sizing: border-box;
+      }
+      
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      
+      .column {
+        float: left;
+        width: 25%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+      
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+      }
+      
+      .about-section {
+        padding: 35px;
+        text-align: center;
+        background-color: #8cf183;
+        color: black;
+      }
+      
+      .container {
+        padding: 0 16px;
+      }
+      
+      .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      .title {
+        color: grey;
+      }
+      
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #4CAF50;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      .button:hover {
+        background-color: #91ff78;
+      }
+      
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+  </style>
+</head>
+<body>
+    <div class="about-section">
+        <h1>About Us Page</h1>
+        <p>This project was developed by Mr.Nikil Sri Shen & Mr.Santhosh</p>
+      </div>
+      
+      <h2 style="text-align:center">Our Team</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="6090.jpg" alt="santhosh" style="width:100%;height:50%;">
+            <div class="container">
+              <h2>Santhosh</h2>
+              <p class="title">Developer</p>
+              <p>Studying 3rd year in MEPCO SCHLENK ENGINEERING COLLEGE.</p>
+              <p>santhoshkannan01072002@gmail.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="" alt="Mike" style="width:100%">
+            <div class="container">
+              <h2>Nikil Sri Shen</h2>
+              <p class="title">Art Director</p>
+              <p>Studying 3rd year in MEPCO SCHLENK ENGINEERING COLLEGE.</p>
+              <p>nikilsrishen@gmail.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- <div class="column">
+          <div class="card">
+            <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h2>John Doe</h2>
+              <p class="title">Designer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>john@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </body>
+</html>
